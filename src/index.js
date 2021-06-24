@@ -1,18 +1,24 @@
 import validator from './validator.js';
 
-let boton = document.getElementById("boton");
-//agregamos el evento click al boton
-boton.addEventListener('click',()=>{
-    //console.log("Hola")
-    //capturamos el valor del input text id=tarjeta
-    let creditCardNumber=document.getElementById("tarjeta").value;
-    //Pasamos el valor como argumento de la función
-    let resultado=validator.isValid(creditCardNumber)
-    let tarjetaCamuflada=validator.maskify(creditCardNumber,resultado)
+let formulario =document.getElementById("formulario");
+formulario.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    //capturamos el valor de los inputs del formulario con el name
+    let nombre = formulario['nombre'].value;
+    let creditCardNumber= formulario['tarjeta'].value;
+    
+    //Funciones de validación
+    let resultado=validator.isValid(creditCardNumber) //obtengo si la tarjeta es válid
+    let tarjetaCamuflada=validator.maskify(creditCardNumber,resultado) // enmascaro la tarjeta
+
+    //Evaluar si la tarjeta es válida o no
     if(resultado){
-        alert('Tarjeta válida '+tarjetaCamuflada)
+        alert('Tarjeta válida '+tarjetaCamuflada);
     }else{
-        alert('Tarjeta no valida '+tarjetaCamuflada)
+        alert('Tarjeta no valida '+tarjetaCamuflada + 'por favor ingresar nuevamente la tarjeta');
     }
+    document.getElementById("nombre_tarjeta").innerHTML=""+nombre;
+    document.getElementById('numero_tarjeta').innerHTML=""+tarjetaCamuflada;
+
 })
 

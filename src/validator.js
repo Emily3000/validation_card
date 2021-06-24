@@ -22,6 +22,7 @@ const validator = {
                 //console.log(aux%10)
                 //Obtenemos la parte entera con math.trunc https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
                 let aux2=Math.trunc(aux/10) + aux%10;
+                // trunc me ayuda a obtener mi respuesta numero entero
                 reversoTarjeta[i]=aux2+"";
             }else{
                 //el valor inicial de la posicion i se reemplaza con el valor x2
@@ -45,7 +46,8 @@ const validator = {
     }
 },
 
-    maskify: (creditCardNumber, resultado)=>{
+    maskify: (creditCardNumber)=>{ 
+        // Nos ayuda enmascarar a mostrar los ultimos 4digitos de la tarjeta
             //comvertimos en array
             //console.log(creditCardNumber)
             let tarjetaArray = creditCardNumber.split('');
@@ -56,15 +58,7 @@ const validator = {
             for (let i =0; i<tarjetaArray.length;i++){
                 tarjetaMaskify+=tarjetaArray[i];
             }
-            if(resultado){
-                //alert("La tarjeta "+tarjetaMaskify +" es válido")
-                return tarjetaMaskify;
-            }else{
-                return tarjetaMaskify;
-                //alert("La tarjeta "+tarjetaMaskify +" no es válido")
-            }
-            //console.log(tarjetaArray)
-
+            return tarjetaMaskify;
     }
 
     

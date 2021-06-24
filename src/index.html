@@ -2,15 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
     <title>Tarjeta de crédito válida</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+  
   </head>
   <body>
-  
-    <header></header>
-    <p>Ingresar un número de tarjeta por favor</p>
-    <input type="text" id="tarjeta">
-    <button id="boton" >Verificar</button>
+      <main class="contenedor">
+      <!--IMagen de tarjeta-->
+      <section class="tarjeta">
+          <p id="nombre_tarjeta">Nombre:</p>
+          <p id="numero_tarjeta">Tarjeta:</p>
+        
+
+      </section>
+      <!--Fin de imagen de tarjeta-->
+      <!--Formulario-->
+      <section>
+        <form id="formulario" class="formulario">
+          <div class="formulario-grupo">
+            <label class="etiqueta" for="nombre">Nombre:</label>
+            <input class="entrada" type="text" name="nombre" id ='nombre'>
+          </div>
+          <div class="formulario-grupo">
+            <label for="tarjeta" class="etiqueta">Número de tarjeta:</label>
+            <input class="entrada" type="text" name="tarjeta" id="tarjeta">
+          </div>
+          <div class="formulario-grupo">
+            <button type="submit" id="boton" >Verificar</button>
+          </div>
+        </form>
+      </section>
+      <!--Fin de formulario-->
+      </main>
+      <!--Tarjeta---> 
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta{
+        background-image: url('assets/logo.jpg');
+        width: 580px;
+        height: 350px;
+        margin-bottom: 10px;
+}
+
+
+#nombre_tarjeta{
+    padding-left: 255px;
+    padding-top: 112px;
+}
+#numero_tarjeta{
+    padding-top: 100px;
+    padding-left: 60px;    
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+    padding-top: 10px;
+}
+
+input {
+    width: 250px;
+    padding: 5px;
+}
+
+body {
+    background-color:#bdbfc0;
+    font-family: 'Lato', sans-serif;
+
+}
+
+#boton{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+
